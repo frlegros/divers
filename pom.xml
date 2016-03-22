@@ -4,11 +4,36 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>groupId</groupId>
-    <artifactId>divers</artifactId>
+    <groupId>com.java.tutorial.misc</groupId>
+    <artifactId>misc-tutorials-java</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <name>Misc Trainning Java</name>
+    <build>
+        <!-- we dont want the version to be part of the generated war file name -->
+        <finalName>${artifactId}</finalName>
+    </build>
     <dependencies>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+        </dependency>
+        <!-- Because this is a web app, we also have a dependency on the servlet api. -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+        </dependency>
+        <!-- Hibernate uses slf4j for logging, for our purposes here use the simple backend -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.19</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Hibernate gives you a choice of bytecode providers between cglib and javassist -->
+        <dependency>
+            <groupId>javassist</groupId>
+            <artifactId>javassist</artifactId>
+        </dependency>
         <dependency>
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>
