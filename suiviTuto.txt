@@ -1,3 +1,6 @@
+https://docs.jboss.org/hibernate/orm/3.5/reference/fr/html/tutorial.html
+1.1. Section 1 - Première application Hibernate
+
 http://igm.univ-mlv.fr/~dr/XPOSE2010/guicespring/di_presentation.html
 Les frameworks
 
