@@ -1,5 +1,5 @@
 https://docs.jboss.org/hibernate/orm/3.5/reference/fr/html/tutorial.html
-1.1.2. La première classe
+1.1.3. Le fichier de mappage
 
 http://igm.univ-mlv.fr/~dr/XPOSE2010/guicespring/di_presentation.html
 Les frameworks

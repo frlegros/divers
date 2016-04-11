@@ -18,46 +18,14 @@
         <!-- we dont want the version to be part of the generated war file name -->
         <finalName>${artifactId}</finalName>
     </build>
+
     <dependencies>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>${hibernate.version}</version>
         </dependency>
-        <!-- Because this is a web app, we also have a dependency on the servlet api. -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>${servlet-api-version}</version>
-        </dependency>
-        <!-- Hibernate uses slf4j for logging, for our purposes here use the simple backend -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4jVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>${slf4jVersion}</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- Hibernate gives you a choice of bytecode providers between cglib and javassist -->
-        <dependency>
-            <groupId>javassist</groupId>
-            <artifactId>javassist</artifactId>
-            <version>${javassist.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>hsqldb</groupId>
-            <artifactId>hsqldb</artifactId>
-            <version>1.8.0.10</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.inject</groupId>
-            <artifactId>javax.inject</artifactId>
-            <version>1</version>
-        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

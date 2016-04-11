@@ -12,14 +12,18 @@ public class Event {
     private String title;
     private Date date;
 
-    public Event() {
+    private Event() {
     }
 
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    /**
+     * Never modify an Id of an hibernate object --> private setId
+     * @param id
+     */
+    private void setId(Long id) {
         this.id = id;
     }
 
