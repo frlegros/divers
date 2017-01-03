@@ -1,5 +1,5 @@
 https://docs.jboss.org/hibernate/orm/3.5/reference/fr/html/tutorial.html
-1.1.6. Démarrage et aides
+1.1.7. Charger et stocker des objets
 
 http://igm.univ-mlv.fr/~dr/XPOSE2010/guicespring/di_presentation.html
 Les frameworks
