@@ -9,6 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>resteasy</artifactId>
+    <packaging>war</packaging>
     <name>resteasy</name>
     <build>
         <!-- we dont want the version to be part of the generated war file name -->
