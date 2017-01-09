@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+
+    <appender name="Syslog" class="org.apache.log4j.net.SyslogAppender">
+        <param name="SyslogHost" value="${token.spr-rs.syslog.host}:${token.spr-rs.syslog.port}"/>
+        <param name="Threshold" value="OFF"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="spr-rs %p %c%x %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="RollingFile" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="/opt/logs/resteasy/resteasy.log"/>
+        <param name="Threshold" value="DEBUG"/>
+        <param name="Append" value="true"/>
+        <param name="MaxFileSize" value="100000KB"/>
+        <param name="MaxBackupIndex" value="10"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{ISO8601} spr-rs  %p %c%x %m%n"/>
+        </layout>
+    </appender>
+
+    <logger name="org.hibernate">
+        <level value="INFO"/>
+    </logger>
+
+    <logger name="org.apache">
+        <level value="INFO"/>
+    </logger>
+
+    <logger name="org.jboss">
+        <level value="INFO"/>
+    </logger>
+
+	<logger name="com.querydsl">
+		<level value="INFO"/>
+	</logger>
+
+	<category name="com.transatel.lewis.metrics.ExecutionTimeInterceptor">
+		<priority value="OFF"/>
+	</category>
+
+    <root>
+        <level value="DEBUG"/>
+        <appender-ref ref="Syslog"/>
+        <appender-ref ref="RollingFile"/>
+    </root>
+</log4j:configuration>

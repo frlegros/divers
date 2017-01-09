@@ -16,6 +16,7 @@
         <hibernate.version>5.1.0.Final</hibernate.version>
         <servlet-api-version>2.5</servlet-api-version>
         <slf4jVersion>1.7.19</slf4jVersion>
+        <log4j.version>1.2.17</log4j.version>
         <javassist.version>3.12.1.GA</javassist.version>
         <easymock.version>3.2</easymock.version>
         <junit.version>4.12</junit.version>
@@ -131,17 +132,6 @@
                 <version>${hibernate.version}</version>
             </dependency>
 
-            <!-- Hibernate uses slf4j for logging, for our purposes here use the simple backend -->
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>${slf4jVersion}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-log4j12</artifactId>
-                <version>${slf4jVersion}</version>
-            </dependency>
             <!-- Hibernate gives you a choice of bytecode providers between cglib and javassist -->
             <dependency>
                 <groupId>javassist</groupId>
@@ -192,6 +182,22 @@
             <artifactId>javaee-api</artifactId>
             <version>${version.javaee}</version>
             <scope>provided</scope>
+        </dependency>
+        <!-- Hibernate uses slf4j for logging, for our purposes here use the simple backend -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4jVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4jVersion}</version>
         </dependency>
 
     </dependencies>

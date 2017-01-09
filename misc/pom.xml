@@ -20,17 +20,6 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
         </dependency>
-
-        <!-- Hibernate uses slf4j for logging, for our purposes here use the simple backend -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <scope>test</scope>
-        </dependency>
         <!-- Hibernate gives you a choice of bytecode providers between cglib and javassist -->
         <dependency>
             <groupId>javassist</groupId>

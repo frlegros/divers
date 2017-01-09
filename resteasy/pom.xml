@@ -23,11 +23,6 @@
     </build>
 
     <dependencies>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <scope>test</scope>
-        </dependency>
         <!-- Because this is a web app, we also have a dependency on the servlet api. -->
         <dependency>
             <groupId>javax.servlet</groupId>
